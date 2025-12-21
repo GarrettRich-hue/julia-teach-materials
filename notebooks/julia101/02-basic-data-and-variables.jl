@@ -81,6 +81,38 @@ For example,
 # ╔═╡ 0987ad1e-ad19-4483-a00b-8684b74b4b2d
 typeof("hi")
 
+# ╔═╡ 50c2ef08-f081-409e-bdb3-2b74dbd76574
+md"""
+## Floating point numbers
+Computers can represent approximations to decimal numbers as well called Floats (a techincal term based on how computers are engineered to work with numbers). For example:
+"""
+
+# ╔═╡ 08f796fc-0e9c-4c6d-ab3d-e11046603d55
+0.5
+
+# ╔═╡ f0261df7-862e-4082-9e5c-013e16c50ea4
+0.75
+
+# ╔═╡ a4177926-2da8-4322-9d3a-1eb3955b9eed
+typeof(0.75)
+
+# ╔═╡ 61f5c33a-b599-46a5-a952-abbeb034aaf0
+md"""
+Fun fact: they can respresent infinity as well. And the perculiar number NaN which is short for "not a number" (it's my favourite number). But I hope you never have to use them because they're weird...
+"""
+
+# ╔═╡ 2a021fd2-1a20-452c-b552-7ae6b5e87acb
+Inf
+
+# ╔═╡ 2b6b6e48-60fa-41c3-b43f-9508da94201c
+NaN
+
+# ╔═╡ 6023c66a-e456-4242-92ff-0cf5b69f80a3
+typeof(NaN)
+
+# ╔═╡ 12a3fbfb-97dd-4a48-99ab-a8a24cd10c8c
+typeof(Inf)
+
 # ╔═╡ a6f89720-8100-402f-8427-6179bb6ccdd2
 md"""
 ## Data Literals
@@ -131,8 +163,27 @@ For booleans, use lowercase. Remember that although we write them down as a word
 # ╔═╡ 92935e17-ba74-4217-b5a8-62327278897c
 typeof("false")
 
-# ╔═╡ d88ca342-9251-4c6b-8b38-a2ebbdd659af
-true
+# ╔═╡ 8fa83603-178c-4cfb-a045-168ea664c7a9
+TRUE
+
+# ╔═╡ 4ed0e910-f38a-45ca-90dd-4144797db8bf
+md"""
+Floating point numbers follow a similar pattern to the integers except they must have a decimal point somewhere.
+"""
+
+# ╔═╡ 80b86bcc-2a18-48cb-8292-70169be068b2
+1.2
+
+# ╔═╡ 0475c260-1f1c-43f4-9d61-9d747622d657
+3.
+
+# ╔═╡ 24dbf57c-c02f-45b8-87d0-81afbdb18ca5
+typeof(1.0)
+
+# ╔═╡ 9a53f3a6-a895-4cbc-90ef-c5bba41c4181
+md"""
+Note that Julia considers 1.0 to be a float and 1 to be an integer. They are different.
+"""
 
 # ╔═╡ dfc77ffa-70bd-4f92-ac6c-21cf5b9570a7
 md"""
@@ -212,9 +263,6 @@ Solution:
 # ╔═╡ 4b03e8dd-743d-4015-9c03-87f1a10930d6
 True = false
 
-# ╔═╡ 8fa83603-178c-4cfb-a045-168ea664c7a9
-True
-
 # ╔═╡ 2f3f1730-2cf0-4f49-9036-a2491dd42308
 False = "true"
 
@@ -259,6 +307,15 @@ project_hash = "71853c6197a6a7f222db0f1978c7cb232b87c5ee"
 # ╠═99d965be-0e56-4846-9e5e-6c63d033c992
 # ╠═6720288a-1226-4195-8df8-459171d47122
 # ╠═0987ad1e-ad19-4483-a00b-8684b74b4b2d
+# ╟─50c2ef08-f081-409e-bdb3-2b74dbd76574
+# ╠═08f796fc-0e9c-4c6d-ab3d-e11046603d55
+# ╠═f0261df7-862e-4082-9e5c-013e16c50ea4
+# ╠═a4177926-2da8-4322-9d3a-1eb3955b9eed
+# ╟─61f5c33a-b599-46a5-a952-abbeb034aaf0
+# ╠═2a021fd2-1a20-452c-b552-7ae6b5e87acb
+# ╠═2b6b6e48-60fa-41c3-b43f-9508da94201c
+# ╠═6023c66a-e456-4242-92ff-0cf5b69f80a3
+# ╠═12a3fbfb-97dd-4a48-99ab-a8a24cd10c8c
 # ╟─a6f89720-8100-402f-8427-6179bb6ccdd2
 # ╠═441ec6c4-d7ba-44dd-82cd-ebefe3a1f6c8
 # ╟─630cf211-f73a-4ccd-897a-602919baef5c
@@ -269,10 +326,14 @@ project_hash = "71853c6197a6a7f222db0f1978c7cb232b87c5ee"
 # ╠═9f7a3002-f835-4bc0-9ba2-f071673fde54
 # ╟─52b28187-4def-4ce7-9984-44d625827151
 # ╠═7308cf35-e0e1-4da4-8b6d-023395349972
-# ╠═8735dfa5-cf69-452c-b8b0-0a97ac37f49d
+# ╟─8735dfa5-cf69-452c-b8b0-0a97ac37f49d
 # ╠═92935e17-ba74-4217-b5a8-62327278897c
 # ╠═8fa83603-178c-4cfb-a045-168ea664c7a9
-# ╠═d88ca342-9251-4c6b-8b38-a2ebbdd659af
+# ╟─4ed0e910-f38a-45ca-90dd-4144797db8bf
+# ╠═80b86bcc-2a18-48cb-8292-70169be068b2
+# ╠═0475c260-1f1c-43f4-9d61-9d747622d657
+# ╠═24dbf57c-c02f-45b8-87d0-81afbdb18ca5
+# ╟─9a53f3a6-a895-4cbc-90ef-c5bba41c4181
 # ╟─dfc77ffa-70bd-4f92-ac6c-21cf5b9570a7
 # ╠═ff89c8dc-ade6-4a53-9265-7430be2deea8
 # ╟─706f52dc-43f4-40e2-a543-c6bb3147ae57
@@ -285,7 +346,7 @@ project_hash = "71853c6197a6a7f222db0f1978c7cb232b87c5ee"
 # ╠═4af155ea-f039-40e4-b1fb-eb6661a38493
 # ╟─da61b46d-ff1e-439b-a4d0-aad594bb2f46
 # ╠═c3ee0b02-1f23-4514-91d8-8a2b3903bda0
-# ╟─e8a08eae-88cb-4559-84d9-ff40789fa832
+# ╠═e8a08eae-88cb-4559-84d9-ff40789fa832
 # ╠═4b03e8dd-743d-4015-9c03-87f1a10930d6
 # ╠═2f3f1730-2cf0-4f49-9036-a2491dd42308
 # ╠═7e7da7bc-0457-47ec-9d8b-e2fb5c4453da
